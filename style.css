@@ -64,13 +64,15 @@ body {
 
 .conteudo-central .subtitulo {
     font-size: 1.5rem;
-    color: #EADCF1;
+    /* --- CORREÇÃO APLICADA AQUI --- */
+    color: #FFFFFF; 
     margin-bottom: 10px;
 }
 
 .conteudo-central .descricao {
     font-size: 1.2rem;
-    color: #EADCF1;
+    /* --- CORREÇÃO APLICADA AQUI --- */
+    color: #FFFFFF; 
     margin-bottom: 35px;
 }
 
@@ -138,7 +140,6 @@ body {
     border-radius: 15px;
     flex: 2;
     height: 100%;
-    /* --- CORREÇÃO APLICADA AQUI: Adiciona espaçamento após o texto da missão --- */
     margin-bottom: 40px; 
 }
 
