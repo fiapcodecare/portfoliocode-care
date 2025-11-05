@@ -106,34 +106,31 @@
             <p class="subtitulo-projeto">Uma parceria entre FIAP e ACHE para desenvolver soluções tecnológicas que integram hardware e software de forma inovadora.</p>
             
             <div class="grid-destaque">
-                <div class="card-destaque">
+                <div class="card-destaque" onclick="abrirModalProjeto('inovacao')">
                     <div class="destaque-icone">
                         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
                             <path d="M15.5 0a.5.5 0 0 0-.5.5v15a.5.5 0 0 0 1 0V.5a.5.5 0 0 0-.5-.5zM8 0a.5.5 0 0 0-.5.5v15a.5.5 0 0 0 1 0V.5A.5.5 0 0 0 8 0zM.5 8a.5.5 0 0 0 0 1h15a.5.5 0 0 0 0-1H.5zM.5 16a.5.5 0 0 0 0 1h15a.5.5 0 0 0 0-1H.5zM8 8a.5.5 0 0 0-.5.5v15a.5.5 0 0 0 1 0V.5A.5.5 0 0 0 8 0z"/>
                         </svg>
                     </div>
                     <h4>Inovação</h4>
-                    <p>Aplicando tecnologias de ponta para criar soluções práticas e eficientes.</p>
                 </div>
                 
-                <div class="card-destaque">
+                <div class="card-destaque" onclick="abrirModalProjeto('objetivo')">
                     <div class="destaque-icone">
                         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
                             <path d="M3.774 5.56M2.81 4.293A.5.5 0 0 1 3.5 4h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.685-.707zM.83 7.846A.5.5 0 0 1 1.5 8h13a.5.5 0 0 1 0 1h-13a.5.5 0 0 1-.685-.707zM.83 12.846A.5.5 0 0 1 1.5 13h13a.5.5 0 0 1 0 1h-13a.5.5 0 0 1-.685-.707zM.83 2.846A.5.5 0 0 1 1.5 3h13a.5.5 0 0 1 0 1h-13a.5.5 0 0 1-.685-.707zM3.774 1.56M2.81 12.293A.5.5 0 0 1 3.5 12h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.685-.707z"/>
                         </svg>
                     </div>
                     <h4>Objetivo</h4>
-                    <p>Desenvolver um sistema integrado que une software e hardware de forma harmoniosa.</p>
                 </div>
 
-                <div class="card-destaque">
+                <div class="card-destaque" onclick="abrirModalProjeto('impacto')">
                     <div class="destaque-icone">
                         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
                             <path d="M15.5 0a.5.5 0 0 0-.5.5v15a.5.5 0 0 0 1 0V.5a.5.5 0 0 0-.5-.5zM8 0a.5.5 0 0 0-.5.5v15a.5.5 0 0 0 1 0V.5A.5.5 0 0 0 8 0zM.5 8a.5.5 0 0 0 0 1h15a.5.5 0 0 0 0-1H.5zM.5 16a.5.5 0 0 0 0 1h15a.5.5 0 0 0 0-1H.5zM8 8a.5.5 0 0 0-.5.5v15a.5.5 0 0 0 1 0V.5A.5.5 0 0 0 8 0z"/>
                         </svg>
                     </div>
                     <h4>Impacto</h4>
-                    <p>Criar uma solução que possa fazer diferença real no mercado farmacêutico.</p>
                 </div>
             </div>
             
@@ -183,16 +180,33 @@
             <div class="tecnologias-container">
                 <h3>Tecnologias Utilizadas</h3>
                 <div class="grid-tecnologias">
-                    <ul>
-                        <li><span class="bullet-rosa"></span>React + TypeScript</li>
-                        <li><span class="bullet-rosa"></span>Node.js + Express</li>
-                        <li><span class="bullet-rosa"></span>PostgreSQL</li>
-                    </ul>
-                    <ul>
-                        <li><span class="bullet-rosa"></span>APIs RESTful</li>
-                        <li><span class="bullet-rosa"></span>Tailwind CSS</li>
-                        <li><span class="bullet-rosa"></span>Git + GitHub</li>
-                    </ul>
+                    <div class="tecnologia-bloco">
+                        <h4>Linguagens de Programação</h4>
+                        <ul>
+                            <li><span class="bullet-rosa"></span>Python</li>
+                            <li><span class="bullet-rosa"></span>JavaScript</li>
+                            <li><span class="bullet-rosa"></span>HTML</li>
+                            <li><span class="bullet-rosa"></span>CSS</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tecnologia-bloco">
+                        <h4>Tecnologias e Recursos Utilizados</h4>
+                        <ul>
+                            <li><span class="bullet-rosa"></span>RAG (Retrieval-Augmented Generation)</li>
+                            <li><span class="bullet-rosa"></span>Chatbot inteligente</li>
+                            <li><span class="bullet-rosa"></span>Embedding para análise e processamento de dados</li>
+                            <li><span class="bullet-rosa"></span>Inteligência Artificial aplicada à automação e suporte</li>
+                        </ul>
+                    </div>
+
+                    <div class="tecnologia-bloco">
+                        <h4>Banco de Dados</h4>
+                        <ul>
+                            <li><span class="bullet-rosa"></span>PostgreSQL</li>
+                            <li><span class="bullet-rosa"></span>Banco de dados relacional e vetorial integrados</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -204,7 +218,7 @@
                 <div class="icone-hardware">
                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
                         <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492z"/>
-                        <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l-.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.27.098.56.16.862.195l.079.289c.877 3.141-2.546 5.8-5.748 4.921l-.289-.08c-3.141-.877-5.8 2.546-4.921 5.748l.08.289c.27.098.56.16.862.195l.079.289c.877 3.141-2.546 5.8-5.748 4.921l-.289-.08c-3.141-.877-5.8 2.546-4.921 5.748l.08.289c.27.098.56.16.862.195z"/>
+                        <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l-.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.27.098.56.16.862.195l.079.289c.877 3.141-2.546 5.8-5.748 4.921l-.289-.08c-3.141-.877-5.8 2.546-4.921 5.748l.08.289c.27.098.56.16.862.195z"/>
                     </svg>
                 </div>
                 <h2>Hardware</h2>
@@ -277,7 +291,7 @@
                     <h4>Fale Conosco</h4>
                     <div class="bloco-contato">
                         <span class="label">E-mail:</span>
-                        <a href="mailto:code&carefiap@gmail.com.br">code&carefiap@gmail.com.br</a>
+                        <a href="mailto:code&carefiap@gmail.com.br">fiapcodecare@gmail.com</a>
                     </div>
                 </div>
 
@@ -295,15 +309,15 @@
             <span class="fechar-modal" onclick="fecharModal()">&times;</span>
             
             <div class="modal-header">
-                <img id="modalFoto" src="" alt="Foto do Membro" class="foto-modal">
-                <h3 id="modalNome">Nome do Membro</h3>
-                <p id="modalFuncao" class="funcao-modal">Função do Membro</p>
+                <img id="modalFoto" src="" alt="Foto do Membro" class="foto-modal"> 
+                <h3 id="modalNome">Nome/Título do Tópico</h3>
+                <p id="modalFuncao" class="funcao-modal">Função/Subtítulo</p>
             </div>
 
             <div class="modal-body">
-                <p id="modalTexto"></p> 
+                <p id="modalTexto"></p>
                 
-                <div class="modal-social">
+                <div id="modalSocial" class="modal-social">
                     <a id="modalLinkedinLink" href="#" target="_blank" class="linkedin-link">
                        <img src="linkedin-icon.png" alt="Ícone do LinkedIn" class="linkedin-icon-img">
                     </a>
@@ -359,38 +373,76 @@
             bio: "Atuou diretamente na parte de software do projeto, contribuindo com soluções práticas e funcionais que ajudaram a otimizar o desempenho do sistema e aprimorar sua usabilidade. Além disso, colaborou na gestão do cronograma de entregas e na organização dos prazos, garantindo o bom andamento das etapas de desenvolvimento e integração entre as equipes. Possui habilidades em gestão de dados, desenvolvimento web, administração de processos e boa comunicação, o que favoreceu a colaboração e a eficiência do grupo durante todo o projeto."
         }
     };
+    
+    // 2. DADOS DO PROJETO PARA OS NOVOS MODAIS (TEXTOS ATUALIZADOS AQUI)
+    const dadosProjeto = {
+        inovacao: {
+            titulo: "Inovação",
+            texto: "A inovação do nosso projeto está no uso estratégico da inteligência artificial e de bibliotecas especializadas para tornar o processo de análise e controle mais preciso e eficiente. Com o auxílio da IA, conseguimos realizar análises computacionais avançadas, identificando padrões e garantindo resultados mais confiáveis. Além disso, o uso de bibliotecas organizadas e bem estruturadas permite que o sistema responda com agilidade e precisão aos critérios definidos, unindo tecnologia, automação e inteligência de forma prática e inovadora."
+        },
+        objetivo: {
+            titulo: "Objetivo",
+            texto: "O principal objetivo do nosso projeto é desenvolver uma solução tecnológica que una automação e inteligência artificial para otimizar o controle e a gestão dos produtos da Aché. Buscamos criar um sistema capaz de tornar os processos internos mais ágeis, precisos e confiáveis, reduzindo erros humanos e melhorando a tomada de decisões."
+        },
+        impacto: {
+            titulo: "Impacto",
+            texto: "O impacto do nosso projeto está na forma como ele transforma os processos internos da Aché, trazendo mais eficiência, precisão e inovação. Ao combinar automação, inteligência artificial e integração entre hardware e software, criamos uma solução que reduz falhas, melhora o controle de qualidade e agiliza a análise de dados. Além de otimizar resultados, o projeto incentiva a digitalização e o uso estratégico da tecnologia dentro da empresa, contribuindo para um ambiente mais moderno, inteligente e preparado para o futuro."
+        }
+    };
 
     const modal = document.getElementById('modalMembro');
     const modalFoto = document.getElementById('modalFoto');
     const modalNome = document.getElementById('modalNome');
     const modalFuncao = document.getElementById('modalFuncao');
-    const modalTexto = document.getElementById('modalTexto'); // Novo elemento
-    const modalLinkedinLink = document.getElementById('modalLinkedinLink'); 
+    const modalTexto = document.getElementById('modalTexto');
+    const modalLinkedinLink = document.getElementById('modalLinkedinLink');
+    const modalSocial = document.getElementById('modalSocial');
 
-    // 2. FUNÇÃO PARA ABRIR O MODAL
+
+    // FUNÇÃO CENTRAL PARA ABRIR O MODAL DE MEMBROS
     function abrirModal(idMembro) {
         const membro = dadosMembros[idMembro];
 
-        // Preenche o Modal com os dados do membro
+        // 1. Preenche o Modal com os dados do MEMBRO
         modalFoto.src = membro.foto;
         modalFoto.alt = `Foto de ${membro.nome}`;
         modalNome.textContent = membro.nome;
         modalFuncao.textContent = membro.funcao;
-        modalTexto.textContent = membro.bio; // Preenche a biografia
-        
-        // Define o atributo href do link do LinkedIn
+        modalTexto.textContent = membro.bio;
         modalLinkedinLink.href = membro.linkedin;
 
-        // Exibe o modal
+        // 2. Torna elementos visíveis/ocultos: Membros têm foto e link social.
+        modalFoto.style.display = 'block';
+        modalFuncao.style.display = 'block';
+        modalSocial.style.display = 'block';
+        
+        // 3. Exibe e gerencia o scroll
         modal.style.display = 'block';
-
-        // Bloqueia o scroll do corpo da página
         document.body.style.overflow = 'hidden';
     }
 
-    // 3. FUNÇÕES PARA FECHAR O MODAL
+    // NOVA FUNÇÃO PARA ABRIR O MODAL DO PROJETO
+    function abrirModalProjeto(idProjeto) {
+        const projeto = dadosProjeto[idProjeto];
+        
+        // 1. Preenche o Modal com os dados do PROJETO
+        modalNome.textContent = projeto.titulo;
+        modalTexto.textContent = projeto.texto;
+        // Não há função/subtítulo claro para o projeto, então usamos o título no h3 e o texto no p
+        
+        // 2. Torna elementos visíveis/ocultos: Projeto NÃO tem foto, função ou link social.
+        modalFoto.style.display = 'none'; // Oculta a foto
+        modalFuncao.style.display = 'none'; // Oculta a função
+        modalSocial.style.display = 'none'; // Oculta o link social
+        
+        // 3. Exibe e gerencia o scroll
+        modal.style.display = 'block';
+        document.body.style.overflow = 'hidden';
+    }
+
+
+    // FUNÇÕES PARA FECHAR O MODAL (UNIFICADA)
     function fecharModal(event) {
-        // Se o evento existe e o clique foi diretamente no overlay
         if (!event || event.target.id === 'modalMembro' || event.target.classList.contains('fechar-modal')) {
             modal.style.display = 'none';
             document.body.style.overflow = 'auto';
