@@ -65,14 +65,14 @@ body {
 .conteudo-central .subtitulo {
     font-size: 1.5rem;
     /* --- CORREÇÃO APLICADA AQUI --- */
-    color: #FFFFFF; 
+    color: #FFFFFF;  
     margin-bottom: 10px;
 }
 
 .conteudo-central .descricao {
     font-size: 1.2rem;
     /* --- CORREÇÃO APLICADA AQUI --- */
-    color: #FFFFFF; 
+    color: #FFFFFF;  
     margin-bottom: 35px;
 }
 
@@ -255,11 +255,16 @@ body {
     text-align: center;
     border: 1px solid #2e2e2e;
     transition: transform 0.3s ease;
+    cursor: pointer; /* NOVO: Indica que é clicável */
+    min-height: 220px; /* Garante que os cards tenham altura mínima para parecerem blocos */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza verticalmente o conteúdo (ícone e título) */
 }
 
 .card-destaque:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), 0 0 20px rgba(217, 46, 134, 0.3); /* Efeito de brilho no hover */
 }
 
 .destaque-icone {
@@ -282,14 +287,8 @@ body {
 .card-destaque h4 {
     font-size: 1.4rem;
     font-weight: 700;
-    margin-bottom: 10px;
+    margin-bottom: 0; /* Removido o margin-bottom para centralizar melhor */
     color: #D92E86;
-}
-
-.card-destaque p {
-    font-size: 1rem;
-    color: #CCCCCC;
-    line-height: 1.5;
 }
 
 /* SEÇÃO INTERNA: SOBRE A PARCERIA */
@@ -668,13 +667,15 @@ footer {
     margin-bottom: 20px;
 }
 
+/* Apenas para garantir que a imagem não desapareça totalmente quando oculta via JS */
 .foto-modal {
     width: 100px;
     height: 100px;
     border-radius: 50%;
     object-fit: cover;
     border: 4px solid #D92E86;
-    margin-bottom: 10px;
+    /* CORREÇÃO APLICADA AQUI PARA CENTRALIZAR A IMAGEM */
+    margin: 0 auto 10px auto; /* Centraliza horizontalmente e mantém margem inferior */
 }
 
 #modalNome {
@@ -702,6 +703,48 @@ footer {
     to {opacity: 1;}
 }
 
+/* ======================================= */
+/* ESTILOS DO MODAL (INCLUINDO LINKEDIN)  */
+/* ======================================= */
+/* Container do Ícone Social */
+.modal-social {
+    text-align: center; /* Centraliza o link (o bloco inline-block) */
+    padding-top: 20px;
+    margin-top: 20px;
+    border-top: 1px solid #2e2e2e;
+}
+
+/* O Link do LinkedIn (o 'a' tag) */
+.linkedin-link {
+    display: inline-flex; /* Para centralizar a imagem dentro dele */
+    align-items: center;
+    justify-content: center;
+    width: 45px; /* Tamanho do "botão" invisível */
+    height: 45px;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+/* Estilo para a NOVA IMAGEM PNG */
+.linkedin-link .linkedin-icon-img {
+    width: 30px; /* Tamanho da imagem do ícone */
+    height: 30px;
+    object-fit: contain; /* Garante que a imagem se encaixe sem ser cortada */
+    transition: filter 0.2s ease;
+}
+
+/* Efeito Hover */
+.linkedin-link:hover {
+    transform: scale(1.1); /* Um pequeno zoom ao passar o mouse */
+    /* Opcional: Efeito visual sutil no fundo do círculo */
+    background-color: rgba(217, 46, 134, 0.1);
+}
+
+.linkedin-link:hover .linkedin-icon-img {
+    filter: drop-shadow(0 0 5px #D92E86); /* Adiciona um brilho rosa */
+}
+
 /* --- RESPONSIVIDADE (MEDIA QUERIES) --- */
 /* Ajustes para Telas de Tablet (abaixo de 992px) */
 @media (max-width: 992px) {
@@ -720,6 +763,10 @@ footer {
     .grid-destaque {
         flex-direction: column;
         gap: 20px;
+    }
+    
+    .card-destaque {
+        min-height: auto; /* Remove a altura fixa em telas menores */
     }
 
     .grid-tecnologias {
@@ -773,61 +820,4 @@ footer {
         width: 95%;
         margin: 15% auto;
     }
-}
-
-.modal-body p {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #DDDDDD;
-    margin-bottom: 15px;
-}
-
-.nota-modal {
-    font-size: 0.85rem;
-    color: #888888;
-    margin-top: -10px;
-}
-
-/* ======================================= */
-/* ESTILOS DO MODAL (INCLUINDO LINKEDIN)  */
-/* ======================================= */
-/* Container do Ícone Social */
-.modal-social {
-    text-align: center; /* Centraliza o link (o bloco inline-block) */
-    padding-top: 20px;
-    margin-top: 20px;
-    border-top: 1px solid #2e2e2e;
-}
-
-/* O Link do LinkedIn (o 'a' tag) */
-.linkedin-link {
-    display: inline-flex; /* Para centralizar a imagem dentro dele */
-    align-items: center;
-    justify-content: center;
-    width: 45px; /* Tamanho do "botão" invisível */
-    height: 45px;
-    border-radius: 50%;
-    text-decoration: none;
-    transition: transform 0.2s ease, background-color 0.2s ease;
-    /* Remover o background-color se não quiser um círculo sólido atrás da imagem */
-    /* background-color: rgba(217, 46, 134, 0.1); */
-}
-
-/* Estilo para a NOVA IMAGEM PNG */
-.linkedin-link .linkedin-icon-img {
-    width: 30px; /* Tamanho da imagem do ícone */
-    height: 30px;
-    object-fit: contain; /* Garante que a imagem se encaixe sem ser cortada */
-    transition: filter 0.2s ease;
-}
-
-/* Efeito Hover */
-.linkedin-link:hover {
-    transform: scale(1.1); /* Um pequeno zoom ao passar o mouse */
-    /* Opcional: Efeito visual sutil no fundo do círculo */
-    background-color: rgba(217, 46, 134, 0.1);
-}
-
-.linkedin-link:hover .linkedin-icon-img {
-    filter: drop-shadow(0 0 5px #D92E86); /* Adiciona um brilho rosa */
 }
