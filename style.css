@@ -1,6 +1,3 @@
-/* --- style.css OTIMIZADO --- */
-
-/* --- Configurações Globais / Reset --- */
 * {
     margin: 0;
     padding: 0;
@@ -8,21 +5,18 @@
 }
 
 body {
-    /* A fonte Montserrat será aplicada em todo o site */
     font-family: 'Montserrat', sans-serif;
-    background-color: #101010; /* Cor de fundo base */
+    background-color: #101010;
     color: #FFFFFF;
     line-height: 1.6;
 }
 
-/* Container para limitar a largura do conteúdo e centralizar */
 .container {
     max-width: 1100px;
     margin: 0 auto;
-    padding: 0 20px; /* Adicionado padding horizontal para telas menores */
+    padding: 0 20px;
 }
 
-/* --- 1. Estilo da Tela Inicial (HERO) --- */
 .tela-inicial {
     position: relative;
     display: flex;
@@ -31,13 +25,11 @@ body {
     height: 100vh;
     text-align: center;
     padding: 20px;
-    /* --- IMPORTANTE: SUBSTITUA PELO CAMINHO DA SUA IMAGEM --- */
     background-image: url('background.jpg');
     background-size: cover;
     background-position: center;
 }
 
-/* Sobreposição escura */
 .tela-inicial::before {
     content: '';
     position: absolute;
@@ -64,21 +56,19 @@ body {
 
 .conteudo-central .subtitulo {
     font-size: 1.5rem;
-    /* --- CORREÇÃO APLICADA AQUI --- */
     color: #FFFFFF;  
     margin-bottom: 10px;
 }
 
 .conteudo-central .descricao {
     font-size: 1.2rem;
-    /* --- CORREÇÃO APLICADA AQUI --- */
     color: #FFFFFF;  
     margin-bottom: 35px;
 }
 
 .botao-cta {
     display: inline-block;
-    background-color: #D92E86; /* Cor rosa/magenta */
+    background-color: #D92E86;
     color: #FFFFFF;
     padding: 15px 35px;
     border-radius: 50px;
@@ -94,7 +84,6 @@ body {
     box-shadow: 0 0 30px rgba(217, 46, 134, 0.9);
 }
 
-/* --- 2. Estilos da Seção Sobre Nós --- */
 #sobre-nos {
     background-color: #121212;
     padding: 100px 0;
@@ -124,15 +113,13 @@ body {
     line-height: 1.6;
 }
 
-/* LAYOUT PRINCIPAL: Missão e Membros Lado a Lado */
-.conteudo-missao-membros {
+.container-sobre-nos {
     display: flex;
     gap: 30px;
     text-align: left;
     align-items: stretch;
 }
 
-/* Box da Missão */
 .missao-container {
     background-color: #1c1c1c;
     color: #ffffff;
@@ -162,47 +149,43 @@ body {
     margin-bottom: 0;
 }
 
-/* NOVO GRID DE MEMBROS CLICÁVEIS */
 .grid-membros-clicaveis {
     flex: 3;
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 colunas em desktop */
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
 
-/* Estilos dos Cards de Membro CLICÁVEL */
 .card-membro-detalhe {
     background-color: #1E1E1E;
     padding: 25px 20px;
     border-radius: 15px;
     border: 1px solid #2e2e2e;
     text-align: center;
-    cursor: pointer; /* Indica que é clicável */
+    cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
 
 .card-membro-detalhe:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 0 20px rgba(217, 46, 134, 0.3); /* Efeito de brilho rosa */
-    background-color: #252525; /* Escurece um pouco mais ao passar o mouse */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 0 20px rgba(217, 46, 134, 0.3);
+    background-color: #252525;
 }
 
-/* CONTAINER DA IMAGEM: Garante o tamanho e corte */
 .membro-icone {
     width: 60px;
     height: 60px;
     background-color: transparent;
     border-radius: 50%;
     margin: 0 auto 15px auto;
-    overflow: hidden; /* ESSENCIAL: Corta o excesso da imagem para ficar no círculo */
+    overflow: hidden;
 }
 
-/* ESTILO DA IMAGEM: Faz a foto encaixar */
 .foto-membro {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Garante que a imagem preencha e seja cortada */
-    border-radius: 50%; /* Faz o corte circular */
+    object-fit: cover;
+    border-radius: 50%;
     border: 3px solid #D92E86;
 }
 
@@ -217,7 +200,6 @@ body {
     color: #CCCCCC;
 }
 
-/* --- 3. CONFIGURAÇÕES DA SEÇÃO O PROJETO --- */
 #projeto {
     background-color: #101010;
     padding: 100px 0;
@@ -239,7 +221,6 @@ body {
     line-height: 1.5;
 }
 
-/* ESTILOS DOS CARDS DE DESTAQUE (Inovação, Objetivo, Impacto) */
 .grid-destaque {
     display: flex;
     justify-content: space-between;
@@ -255,16 +236,16 @@ body {
     text-align: center;
     border: 1px solid #2e2e2e;
     transition: transform 0.3s ease;
-    cursor: pointer; /* NOVO: Indica que é clicável */
-    min-height: 220px; /* Garante que os cards tenham altura mínima para parecerem blocos */
+    cursor: pointer;
+    min-height: 220px;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centraliza verticalmente o conteúdo (ícone e título) */
+    justify-content: center;
 }
 
 .card-destaque:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), 0 0 20px rgba(217, 46, 134, 0.3); /* Efeito de brilho no hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), 0 0 20px rgba(217, 46, 134, 0.3);
 }
 
 .destaque-icone {
@@ -287,11 +268,10 @@ body {
 .card-destaque h4 {
     font-size: 1.4rem;
     font-weight: 700;
-    margin-bottom: 0; /* Removido o margin-bottom para centralizar melhor */
+    margin-bottom: 0;
     color: #D92E86;
 }
 
-/* SEÇÃO INTERNA: SOBRE A PARCERIA */
 .parceria-container {
     background-color: #1e1e1e;
     padding: 50px;
@@ -315,9 +295,8 @@ body {
     line-height: 1.7;
 }
 
-/* --- 4. CONFIGURAÇÕES DA SEÇÃO SOFTWARE --- */
 #software {
-    background-color: #121212; /* Fundo escuro */
+    background-color: #121212;
     padding: 100px 0;
     text-align: center;
 }
@@ -331,7 +310,7 @@ body {
 }
 
 .icone-software svg {
-    fill: #D92E86; /* Cor rosa/magenta */
+    fill: #D92E86;
 }
 
 #software h2 {
@@ -346,7 +325,6 @@ body {
     color: #CCCCCC;
 }
 
-/* GRID DOS VÍDEOS (Software e Hardware usam .grid-videos) */
 .grid-videos {
     display: flex;
     gap: 30px;
@@ -363,11 +341,10 @@ body {
     padding-bottom: 30px;
 }
 
-/* Placeholder do vídeo de SOFTWARE */
 .video-placeholder {
     width: 100%;
     padding-top: 56.25%;
-    background-color: #310022; /* Fundo escuro rosado do placeholder */
+    background-color: #310022;
     position: relative;
     margin-bottom: 20px;
     display: flex;
@@ -375,11 +352,10 @@ body {
     align-items: center;
 }
 
-/* Placeholder do vídeo de HARDWARE (Usando uma cor de fundo sutilmente diferente) */
 .video-placeholder-hardware {
     width: 100%;
     padding-top: 56.25%;
-    background-color: #2a0a22; /* Cor de fundo ligeiramente diferente para hardware */
+    background-color: #2a0a22;
     position: relative;
     margin-bottom: 20px;
     display: flex;
@@ -387,7 +363,6 @@ body {
     align-items: center;
 }
 
-/* Estilo do Ícone de Play (Comum para ambos os placeholders) */
 .video-placeholder svg, .video-placeholder-hardware svg {
     position: absolute;
     top: 50%;
@@ -408,7 +383,6 @@ body {
     padding: 0 30px;
 }
 
-/* TECNOLOGIAS E COMPONENTES UTILIZADOS (Hardware e Software usam .tecnologias-container) */
 .tecnologias-container {
     background-color: #1c1c1c;
     padding: 40px 60px;
@@ -428,7 +402,23 @@ body {
     gap: 100px;
 }
 
+.tecnologia-bloco {
+    text-align: left;
+}
+
+.tecnologia-bloco h4 {
+    font-size: 1.2rem;
+    color: #D92E86;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
 .grid-tecnologias ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.tecnologia-bloco ul {
     list-style: none;
     padding-left: 0;
 }
@@ -437,6 +427,14 @@ body {
     font-size: 1.1rem;
     color: #DDDDDD;
     margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.tecnologia-bloco li {
+    font-size: 1rem;
+    color: #DDDDDD;
+    margin-bottom: 10px;
     display: flex;
     align-items: center;
 }
@@ -450,9 +448,8 @@ body {
     margin-right: 10px;
 }
 
-/* --- 5. CONFIGURAÇÕES DA SEÇÃO HARDWARE --- */
 #hardware {
-    background-color: #101010; /* Fundo diferente de Software para separação visual */
+    background-color: #101010;
     padding: 100px 0;
     text-align: center;
 }
@@ -466,7 +463,7 @@ body {
 }
 
 .icone-hardware svg {
-    fill: #D92E86; /* Cor rosa/magenta */
+    fill: #D92E86;
 }
 
 #hardware h2 {
@@ -481,40 +478,36 @@ body {
     color: #CCCCCC;
 }
 
-/* --- 6. RODAPÉ (FOOTER) - NOVO DESIGN --- */
 footer {
     background-color: #121212;
-    padding: 70px 0 30px 0; /* Maior padding para dar mais respiro */
+    padding: 70px 0 30px 0;
     color: #CCCCCC;
     font-size: 1rem;
 }
 
 .conteudo-footer-aprimorado {
     display: flex;
-    /* Distribui as colunas de forma uniforme */
     justify-content: space-around;
     align-items: flex-start;
     gap: 40px;
     margin-bottom: 30px;
 }
 
-/* Estilo para Títulos das Colunas (H3 e H4) */
 .conteudo-footer-aprimorado h3, .conteudo-footer-aprimorado h4 {
-    color: #FFFFFF; /* Título em branco */
+    color: #FFFFFF;
     font-size: 1.4rem;
     font-weight: 700;
     margin-bottom: 20px;
 }
 
-/* Coluna Principal: Code&Care */
 .coluna-logo-info {
     max-width: 300px;
     text-align: left;
 }
 
 .coluna-logo-info h3 {
-    font-size: 2rem; /* Título maior para o nome principal */
-    color: #D92E86; /* Cor rosa/magenta no nome principal */
+    font-size: 2rem;
+    color: #D92E86;
     margin-bottom: 5px;
 }
 
@@ -530,14 +523,11 @@ footer {
     line-height: 1.5;
 }
 
-/* Colunas de Navegação e Contato */
 .coluna-links-aprimorada, .coluna-contato-aprimorada {
-    /* Centraliza o texto do bloco (para links e contato) */
     text-align: center;
-    min-width: 180px; /* Garante que as colunas não fiquem muito estreitas */
+    min-width: 180px;
 }
 
-/* Links */
 .coluna-links-aprimorada h4 {
     color: #FFFFFF;
     font-size: 1.2rem;
@@ -560,30 +550,29 @@ footer {
 }
 
 .coluna-links-aprimorada a:hover {
-    color: #D92E86; /* Destaque Rosa */
+    color: #D92E86;
 }
 
-/* Contato */
 .coluna-contato-aprimorada h4 {
     color: #FFFFFF;
     font-size: 1.2rem;
 }
 
 .bloco-contato {
-    text-align: left; /* Alinha o conteúdo de contato à esquerda */
-    display: inline-block; /* Permite que o bloco seja centralizado */
+    text-align: left;
+    display: inline-block;
 }
 
 .bloco-contato .label {
     font-weight: 700;
     color: #AAAAAA;
     margin-right: 5px;
-    display: block; /* Quebra a linha do Label */
+    display: block;
     margin-bottom: 5px;
 }
 
 .bloco-contato a {
-    color: #D92E86; /* E-mail em destaque rosa */
+    color: #D92E86;
     text-decoration: none;
     font-weight: 700;
     font-size: 0.95rem;
@@ -594,7 +583,6 @@ footer {
     opacity: 0.8;
 }
 
-/* Copyright e Linha Divisória */
 .copyright-aprimorado {
     text-align: center;
     padding-top: 20px;
@@ -605,41 +593,37 @@ footer {
 .linha-separadora {
     height: 1px;
     width: 100%;
-    max-width: 800px; /* Linha de comprimento reduzido e centralizada */
-    background: linear-gradient(90deg, transparent 0%, #D92E86 50%, transparent 100%); /* Efeito gradiente rosa */
+    max-width: 800px;
+    background: linear-gradient(90deg, transparent 0%, #D92E86 50%, transparent 100%);
     margin: 0 auto 20px auto;
 }
 
-/* --- ESTILOS DO MODAL (POP-UP) --- */
-/* Fundo escuro que cobre a tela inteira */
 .modal-overlay {
-    display: none; /* Começa oculto */
+    display: none;
     position: fixed;
-    z-index: 1000; /* Garante que fique acima de todo o conteúdo */
+    z-index: 1000;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.85); /* Fundo muito escuro e transparente */
+    background-color: rgba(0, 0, 0, 0.85);
     overflow: auto;
     padding-top: 50px;
 }
 
-/* Conteúdo central do Modal */
 .modal-conteudo {
     background-color: #1a1a1a;
-    margin: 5% auto; /* 5% do topo e centralizado */
+    margin: 5% auto;
     padding: 30px;
     border: 1px solid #333;
     width: 90%;
-    max-width: 600px; /* Largura máxima para desktop */
+    max-width: 600px;
     border-radius: 15px;
     position: relative;
     box-shadow: 0 0 30px rgba(217, 46, 134, 0.5);
     animation: fadeIn 0.3s;
 }
 
-/* Botão de Fechar */
 .fechar-modal {
     color: #D92E86;
     float: right;
@@ -659,7 +643,6 @@ footer {
     cursor: pointer;
 }
 
-/* Header do Modal */
 .modal-header {
     text-align: center;
     padding-bottom: 20px;
@@ -667,15 +650,13 @@ footer {
     margin-bottom: 20px;
 }
 
-/* Apenas para garantir que a imagem não desapareça totalmente quando oculta via JS */
 .foto-modal {
     width: 100px;
     height: 100px;
     border-radius: 50%;
     object-fit: cover;
     border: 4px solid #D92E86;
-    /* CORREÇÃO APLICADA AQUI PARA CENTRALIZAR A IMAGEM */
-    margin: 0 auto 10px auto; /* Centraliza horizontalmente e mantém margem inferior */
+    margin: 0 auto 10px auto;
 }
 
 #modalNome {
@@ -689,7 +670,6 @@ footer {
     color: #CCCCCC;
 }
 
-/* Corpo do Modal */
 .modal-body p {
     font-size: 1rem;
     line-height: 1.6;
@@ -697,76 +677,62 @@ footer {
     margin-bottom: 15px;
 }
 
-/* Animação */
 @keyframes fadeIn {
     from {opacity: 0;}
     to {opacity: 1;}
 }
 
-/* ======================================= */
-/* ESTILOS DO MODAL (INCLUINDO LINKEDIN)  */
-/* ======================================= */
-/* Container do Ícone Social */
 .modal-social {
-    text-align: center; /* Centraliza o link (o bloco inline-block) */
+    text-align: center;
     padding-top: 20px;
     margin-top: 20px;
     border-top: 1px solid #2e2e2e;
 }
 
-/* O Link do LinkedIn (o 'a' tag) */
 .linkedin-link {
-    display: inline-flex; /* Para centralizar a imagem dentro dele */
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 45px; /* Tamanho do "botão" invisível */
+    width: 45px;
     height: 45px;
     border-radius: 50%;
     text-decoration: none;
     transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
-/* Estilo para a NOVA IMAGEM PNG */
 .linkedin-link .linkedin-icon-img {
-    width: 30px; /* Tamanho da imagem do ícone */
+    width: 30px;
     height: 30px;
-    object-fit: contain; /* Garante que a imagem se encaixe sem ser cortada */
+    object-fit: contain;
     transition: filter 0.2s ease;
 }
 
-/* Efeito Hover */
 .linkedin-link:hover {
-    transform: scale(1.1); /* Um pequeno zoom ao passar o mouse */
-    /* Opcional: Efeito visual sutil no fundo do círculo */
+    transform: scale(1.1);
     background-color: rgba(217, 46, 134, 0.1);
 }
 
 .linkedin-link:hover .linkedin-icon-img {
-    filter: drop-shadow(0 0 5px #D92E86); /* Adiciona um brilho rosa */
+    filter: drop-shadow(0 0 5px #D92E86);
 }
 
-/* --- RESPONSIVIDADE (MEDIA QUERIES) --- */
-/* Ajustes para Telas de Tablet (abaixo de 992px) */
 @media (max-width: 992px) {
-    /* SOBRE NÓS */
-    .conteudo-missao-membros {
+    .container-sobre-nos {
         flex-direction: column;
         gap: 40px;
     }
-    /* Altera o grid de membros para 2 colunas */
     .grid-membros-clicaveis {
         grid-template-columns: repeat(2, 1fr);
-        flex: auto; /* Permite que o grid ocupe a largura total */
+        flex: auto;
     }
 
-    /* O PROJETO */
     .grid-destaque {
         flex-direction: column;
         gap: 20px;
     }
     
     .card-destaque {
-        min-height: auto; /* Remove a altura fixa em telas menores */
+        min-height: auto;
     }
 
     .grid-tecnologias {
@@ -778,26 +744,22 @@ footer {
         padding: 40px;
     }
 
-    /* RODAPÉ */
     .conteudo-footer-aprimorado {
-        /* Muda para coluna em telas menores */
         flex-direction: column;
         align-items: center;
-        gap: 40px;
+        gap: 50px;
     }
 
-    /* Centraliza todos os textos em telas menores */
     .coluna-logo-info, .coluna-links-aprimorada, .coluna-contato-aprimorada {
         text-align: center;
         max-width: 100%;
     }
 
     .bloco-contato {
-        text-align: center; /* Centraliza o conteúdo de contato */
+        text-align: center;
     }
 }
 
-/* Ajustes Finais para Celulares (abaixo de 600px) */
 @media (max-width: 600px) {
     .conteudo-central h1 {
         font-size: 3.5rem;
@@ -806,18 +768,47 @@ footer {
         font-size: 1rem;
     }
 
-    /* SOBRE NÓS */
     .grid-membros-clicaveis {
-        grid-template-columns: 1fr; /* 1 coluna em celular */
+        grid-template-columns: 1fr;
     }
 
     .missao-container {
         padding: 25px;
     }
 
-    /* MODAL */
     .modal-conteudo {
         width: 95%;
         margin: 15% auto;
+    }
+
+    .grid-videos {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .grid-tecnologias {
+        flex-direction: column;
+        gap: 30px; 
+    }
+
+    .conteudo-footer-aprimorado {
+        gap: 40px;
+    }
+    
+    .coluna-logo-info {
+        padding-bottom: 10px;
+    }
+
+    .coluna-links-aprimorada ul {
+        text-align: left;
+        display: inline-block;
+    }
+    
+    .bloco-contato {
+        text-align: center; 
+    }
+    .bloco-contato a {
+        word-break: break-all; 
+        display: inline-block;
     }
 }
