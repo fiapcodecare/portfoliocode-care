@@ -45,11 +45,22 @@ body {
     position: relative;
     z-index: 2;
     max-width: 800px;
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+}
+
+/* SELETOR PARA A LOGO: Ajustado para um tamanho mais proporcional */
+.conteudo-central .logo-inicial {
+    margin-bottom: -20px; 
+    max-width: 320px; /* Ajuste para um tamanho proporcional */
+    height: auto;
 }
 
 .conteudo-central h1 {
     font-size: 5rem;
     font-weight: 700;
+    margin-top: 0; 
     margin-bottom: 15px;
     color: #FFFFFF;
 }
@@ -113,17 +124,12 @@ body {
     line-height: 1.6;
 }
 
-/* ========================================================= */
-/* ALTERAÇÕES NA SEÇÃO 'SOBRE NÓS' PARA ATENDER AO PEDIDO */
-/* ========================================================= */
-
 .container-sobre-nos {
-    /* MUDANÇA 1: Altera o layout para empilhar os elementos (Missão acima da Grade) */
     display: flex;
-    flex-direction: column; /* FORÇA A ORDEM VERTICAL: Missão (1º) e Membros (2º) */
-    gap: 50px; /* Aumenta o espaçamento entre a missão e a grade de membros */
+    flex-direction: column; 
+    gap: 50px; 
     text-align: left;
-    align-items: center; /* Centraliza a missão e a grade se não tiverem largura 100% */
+    align-items: center; 
 }
 
 .missao-container {
@@ -131,10 +137,9 @@ body {
     color: #ffffff;
     padding: 30px;
     border-radius: 15px;
-    /* REMOVIDO: flex: 2; - Agora a missão ocupa a largura total do container */
     width: 100%; 
     height: auto; 
-    margin-bottom: 0; /* Ajustado para 0, pois o GAP do container-sobre-nos cuida do espaçamento */
+    margin-bottom: 0; 
 }
 
 .missao-container h3 {
@@ -157,19 +162,16 @@ body {
 }
 
 .grid-membros-clicaveis {
-    /* REMOVIDO: flex: 3; - Agora a grade ocupa a largura total ou máxima definida */
-    width: 100%; /* Garante que ocupe a largura total disponível */
+    width: 100%; 
     display: grid;
-    /* MUDANÇA 2: Grid 3 colunas (para ter 3 em cima e 3 em baixo) */
     grid-template-columns: repeat(3, 1fr); 
-    gap: 30px; /* Ajusta o espaçamento para a nova grade */
-    padding: 0; /* Garante que não haja padding lateral desnecessário */
+    gap: 30px; 
+    padding: 0; 
 }
 
 .card-membro-detalhe {
-    /* MUDANÇA 3: Estilização para deixar os cards mais compactos/proporcionais */
     background-color: #1E1E1E;
-    padding: 25px 15px; /* Reduz o padding para diminuir o tamanho geral */
+    padding: 25px 15px; 
     border-radius: 15px;
     border: 1px solid #2e2e2e;
     text-align: center;
@@ -184,7 +186,6 @@ body {
 }
 
 .membro-icone {
-    /* MUDANÇA 4: Aumenta um pouco o tamanho do ícone para ter mais destaque visual */
     width: 80px; 
     height: 80px; 
     background-color: transparent;
@@ -211,9 +212,6 @@ body {
     font-size: 0.85rem;
     color: #CCCCCC;
 }
-/* ========================================================= */
-/* FIM DAS ALTERAÇÕES NA SEÇÃO 'SOBRE NÓS' */
-/* ========================================================= */
 
 
 #projeto {
@@ -360,7 +358,7 @@ body {
 .video-placeholder {
     width: 100%;
     padding-top: 56.25%;
-    background-color: #310022;
+    background-color: transparent; 
     position: relative;
     margin-bottom: 20px;
     display: flex;
@@ -371,7 +369,7 @@ body {
 .video-placeholder-hardware {
     width: 100%;
     padding-top: 56.25%;
-    background-color: #2a0a22;
+    background-color: transparent; 
     position: relative;
     margin-bottom: 20px;
     display: flex;
@@ -742,8 +740,6 @@ footer {
         gap: 40px;
     }
     .grid-membros-clicaveis {
-        /* Permanece com 3 colunas em telas menores que 1100px, 
-           mas muda para 2 colunas abaixo de 600px */
         grid-template-columns: repeat(2, 1fr); 
         flex: auto;
     }
@@ -791,7 +787,6 @@ footer {
     }
 
     .grid-membros-clicaveis {
-        /* MUDANÇA: Volta para 1 coluna em telas muito pequenas */
         grid-template-columns: 1fr;
     }
 
